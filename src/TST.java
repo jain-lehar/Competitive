@@ -7,6 +7,10 @@ public class TST {
         private Node left,mid,right;
     }
 
+    public TST(){
+        root = new Node();
+    }
+
     public void put(String s,Integer value){
         root = put(root,s,value,0);
     }
