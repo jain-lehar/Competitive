@@ -1,12 +1,10 @@
 public class KnuthMorrisPratt {
 
     private int M;
-    private String pattern;
     private int dfa[][];
     private static final int R = 256;
 
     public KnuthMorrisPratt(String pattern){
-        this.pattern = pattern;
         M = pattern.length();
         dfa = new int[R][M];
         dfa[pattern.charAt(0)][0] = 1;
