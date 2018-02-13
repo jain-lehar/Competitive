@@ -54,9 +54,6 @@ public class Djikstra {
             Node n = pq.poll();
             for(Edge e:n.adj){
                 if(n.dist+e.dist<e.to.dist){
-                    if(pq.contains(e.to)){
-                        pq.remove(e.to);
-                    }
                     e.to.dist = n.dist+e.dist;
                     e.to.parent = n;
                     pq.add(e.to);

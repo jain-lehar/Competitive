@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class ArticulationPoint{
 
     private int V;
     private ArrayList<Integer> adj[];
-    int time = 0;
+    private int time = 0;
     static final int NIL = -1;
 
     public ArticulationPoint(int v){

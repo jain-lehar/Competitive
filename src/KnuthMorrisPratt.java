@@ -8,13 +8,16 @@ public class KnuthMorrisPratt {
         M = pattern.length();
         dfa = new int[R][M];
         dfa[pattern.charAt(0)][0] = 1;
+        int m = 0;
         for(int x=0,j=1;j<M;j++){
             for(int c=0;c<R;c++){
                 dfa[c][j] = dfa[c][x];
             }
             dfa[pattern.charAt(j)][j] = j+1;
             x = dfa[pattern.charAt(j)][x];
+            m = x;
         }
+        System.out.println(m);
     }
 
     public int search(String txt){
@@ -24,5 +27,9 @@ public class KnuthMorrisPratt {
         }
         if(j==M) return i-M;
         else return N;
+    }
+
+    public static void main(String[] args){
+        new KnuthMorrisPratt("AABACADA");
     }
 }

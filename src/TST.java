@@ -20,6 +20,7 @@ public class TST {
         if(x==null){
             x = new Node();
             x.c = c;
+            return x;
         }
         else if(c<x.c) x.left = put(x.left,s,value,d);
         else if(c>x.c) x.right = put(x.right,s,value,d);

@@ -40,7 +40,7 @@ public class IntervalTree{
     private Interval overlapSearch(IntervalNode node,Interval i){
 
         if(node==null) return null;
-        if(node.i.low<=i.high&&i.low<=root.i.high)
+        if(node.i.low<=i.high&&i.low<=node.i.high)
             return node.i;
 
         if(node.left!=null && node.left.max>=i.low)
