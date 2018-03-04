@@ -20,7 +20,6 @@ public class SuffixArray {
             ind[suffixes[0].index] = 0;
             for(int i=1;i<n;i++){
                 if(suffixes[i].rank[0]==prevRank&&suffixes[i].rank[1]==suffixes[i-1].rank[1]){
-                    prevRank = suffixes[i].rank[0];
                     suffixes[i].rank[0] = rank;
                 }
                 else {
