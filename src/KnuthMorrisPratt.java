@@ -26,7 +26,7 @@ public class KnuthMorrisPratt {
             j = dfa[txt.charAt(i)][j];
         }
         if(j==M) return i-M;
-        else return N;
+        else return -1;
     }
 
     public static void main(String[] args){

@@ -44,6 +44,7 @@ public class Djikstra {
         int m = in.nextInt();
         for(int i=0;i<m;i++){
             int a = in.nextInt();
+
             int b = in.nextInt();
             int dist = in.nextInt();
             nodes[a].adj.add(new Edge(nodes[b],dist));

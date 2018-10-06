@@ -7,6 +7,7 @@ public class SuffixArray {
         int n = text.length();
         Suffix suffixes[] = new Suffix[n];
         for(int i=0;i<n;i++){
+            suffixes[i] = new Suffix();
             suffixes[i].index = i;
             suffixes[i].rank[0] = text.charAt(i)-'a';
             suffixes[i].rank[1] = ((i+1)<n)?text.charAt(i+1)-'a':-1;
