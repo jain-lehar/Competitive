@@ -17,6 +17,7 @@ public class LongestIncreasingSubsequence {
                 int x = Arrays.binarySearch(a, 0, len, a[i]);
                 if(x>=0) x++;
                 else x = -(x+1);
+                tailTable[x] = a[i];
             }
         }
         return len;

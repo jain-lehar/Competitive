@@ -33,4 +33,10 @@ public class QuickSort {
         sort(a,lo,j-1);
         sort(a,j+1,hi);
     }
+
+    public static void main(String[] args) {
+        int a[] = {5,32,643,54,324,689,7,523,34,765,3,5,5,7,4657,858,46,46,8769,80};
+        new QuickSort().sort(a);
+        for (int i:a) System.out.println(i);
+    }
 }

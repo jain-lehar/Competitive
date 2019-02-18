@@ -18,12 +18,7 @@ public class ConvexHull {
 
         public void solve(Point[] p){
             Arrays.sort(p);
-            Arrays.sort(p, new Comparator<Point>() {
-                @Override
-                public int compare(Point o1, Point o2) {
-                    return ccw(p[0],o1,o2);
-                }
-            });
+            Arrays.sort(p, (o1, o2) -> ccw(p[0],o1,o2));
             Stack<Point> stack = new Stack<>();
             stack.push(p[0]);
             stack.push(p[1]);
